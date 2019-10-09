@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    padding: 1rem;
+}
+.employee-list{
+    border: solid 1px black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.employee-list > div{
+    border: solid 1px lightgreen;
+    /* width:calc(100%/3); */
+    /* % makes the width relative to parent node
+    minus 2rem means give each box some space
+    when dividing the parent width by 3 */
+    width:calc(100%/3 - 2rem);
+    height:50px;
+    display:flex;
+    justify-content: center;
+    margin:1rem;
+    align-items: center;
+    cursor:pointer;
+}
+.toggle-off{
+    background-color: #b5e9e9;
+}
+.toggle-on{
+    background-color: #fcf1c7;
+}
+
+@media(max-width:600px){
+    .employee-list > div{
+        width:100%;
+    }
+}
+.favoriteEmployeeColor{
+    background-color: #fcf1c7;
+    display: inline-block;
+    width:1rem;
+    height:1rem;
+    border:solid 0.05rem lightgreen;
+}
+.fav{
+    margin-top: 1rem;
+}
